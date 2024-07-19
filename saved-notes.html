@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Notes - BlinkBulletins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BlinkBulletins</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="world" onclick="navClick('world')">World</li>
+                <li id="politics" onclick="navClick('politics')">Politics</li>
+                <li id="business" onclick="navClick('business')">Business</li>
+                <li id="technology" onclick="navClick('technology')">Technology</li>
+                <li id="sports" onclick="navClick('sports')">Sports</li>
+                <li id="entertainment" onclick="navClick('entertainment')">Entertainment</li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Enter search query...">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <aside class="panel-list" id="panel-list">
+            <h2>Panel List</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li id="world" onclick="asideClick('world')">World</li>
+                <li id="politics" onclick="asideClick('politics')">Politics</li>
+                <li id="business" onclick="asideClick('business')">Business</li>
+                <li id="technology" onclick="asideClick('technology')">Technology</li>
+                <li id="sports" onclick="asideClick('sports')">Sports</li>
+                <li id="entertainment" onclick="asideClick('entertainment')">Entertainment</li>
+                <li><a href="saved-articles.html">Saved Articles</a></li>
+                <li><a href="saved-notes.html">Saved Notes</a></li> <!-- New link for saved notes -->
+            </ul>
+        </aside>
+        <section class="saved-notes-section">
+            <h2>Saved Notes</h2>
+            <div id="saved-notes-container" class="notes-cards">
+                <!-- Saved notes will be displayed here dynamically -->
+            </div>
+            <button class="create-note-button" onclick="showNoteForm()">Create Note</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 BlinkBulletins. All Rights Reserved.</p>
+    </footer>
+
+    <div id="note-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNoteForm()">&times;</span>
+            <h2>Create Note</h2>
+            <form id="note-form" onsubmit="saveNote(); return false;">
+                <input type="text" id="note-title" placeholder="Type your title...">
+                <textarea id="note-content" placeholder="Make Note..."></textarea>
+                <button type="submit" class="save-button">Save Note</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
