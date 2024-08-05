@@ -86,6 +86,30 @@
         const analytics = getAnalytics(app);
       </script>    
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDUOkNNKMx6MAYY2gmdENBteutvx5zSiS8",
+            authDomain: "blink-bulletins.firebaseapp.com",
+            projectId: "blink-bulletins",
+            storageBucket: "blink-bulletins.appspot.com",
+            messagingSenderId: "465384069427",
+            appId: "1:465384069427:web:9c8b6bdd06cca47d900646",
+            measurementId: "G-SMG4NF15SB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
     <script src="scripts.js"></script>
 </body>
 
